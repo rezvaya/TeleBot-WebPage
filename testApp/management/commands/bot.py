@@ -10,6 +10,7 @@ from testApp.models import Profile
 # Функция для реакции на принятое сообщение: 
 # ------В случае, если номер договора есть в базе ответ содержит номер договора и баланс
 #       Иначе, сообщение о том, что номера нет в базе
+
 def send_mess(update: Update, context: CallbackContext):
     text = update.message.text
     balance=0
