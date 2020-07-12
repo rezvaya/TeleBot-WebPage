@@ -1,0 +1,28 @@
+<html>
+   <head>
+      <title>Django Test App</title>
+   </head>
+   <body>
+   <h3>Для формирования отчета нажмите кнопку</h3>
+   <form method='get' action='#'>
+        <input type="submit" value="Clear" name="clear" />
+        <input type="submit" value="Сформировать отчет" name="show" />
+    </form>
+
+        {% if hidden == False %}
+            <h1 > Отчёт </h1>
+       <table>
+            <tr><th>Фамилия</th><th>Имя</th><th>Отчество</th><th>Баланс</th></tr>
+            {% for i in answer %}
+                <tr>
+                    <td>{{ i.contractid.f }}</td>
+                    <td>{{ i.contractid.i }}</td>
+                    <td>{{ i.contractid.o }}</td>
+                    <td>{{ i.balance }}</td>
+                </tr>
+            {% endfor %}
+         </table>
+        {% endif %}
+
+    </body>
+</html>
